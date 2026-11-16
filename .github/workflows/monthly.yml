@@ -1,5 +1,9 @@
 name: Monthly China money-flow report
 on:
+  push:
+    paths:
+      - 'money-flow/**'
+      - '.github/workflows/monthly.yml'
   workflow_dispatch:
   schedule:
     - cron: "0 2 15 * *" # 10:00 Beijing time, every 15th
