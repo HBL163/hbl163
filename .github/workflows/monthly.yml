@@ -1,14 +1,14 @@
-name: Monthly money-flow dashboard
+name: Monthly China money-flow report
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 2 15 * *" # 10:00 Asia/Shanghai on day 15
+    - cron: "0 2 15 * *" # 10:00 Beijing time, every 15th
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: money-flow-pages
   cancel-in-progress: true
 jobs:
   build:
@@ -18,8 +18,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build and validate data payload
+      - name: Validate data and generate HTML archive
         run: python money-flow/scripts/build_report.py
+      - name: Save generated report and data snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-flow/site/data/latest.json money-flow/site/reports
+          git diff --cached --quiet || git commit -m "chore(money-flow): archive monthly HTML report"
+          git push
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
