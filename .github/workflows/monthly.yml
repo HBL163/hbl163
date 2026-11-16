@@ -32,6 +32,8 @@ jobs:
           git diff --cached --quiet || git commit -m "chore(money-flow): archive monthly HTML report"
           git push
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: money-flow/site
