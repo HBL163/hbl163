@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "period": null,
+  "published_at": null,
+  "status": "awaiting_official_data",
+  "notice": "尚未导入并核验官方月度数据。此处不展示虚构数值。",
+  "indicators": [],
+  "sources": [
+    {
+      "name": "中国人民银行",
+      "url": "https://www.pbc.gov.cn/"
+    },
+    {
+      "name": "国家统计局",
+      "url": "https://www.stats.gov.cn/"
+    },
+    {
+      "name": "财政部",
+      "url": "https://www.mof.gov.cn/"
+    },
+    {
+      "name": "国家金融监督管理总局",
+      "url": "https://www.nfra.gov.cn/"
+    }
+  ],
+  "methodology": [
+    "存款分部门增量不是M2增量的简单拆分。",
+    "贷款投向不等于贷款资金最终用途。",
+    "M2为货币存量统计，不是逐笔资金流水。",
+    "存款增加不等同于收入、利润或净财富增加。"
+  ]
+}
