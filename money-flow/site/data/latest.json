@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "period": "2026-10",
+  "published_at": "2026-11-13",
+  "status": "verified_snapshot",
+  "currency_unit": "万亿元人民币",
+  "summary": [
+    "10月末M2余额359.06万亿元，同比增长7.1%；M1余额116.90万亿元，同比增长4.4%。",
+    "前10个月社融增量28.61万亿元，其中政府债券净融资11.49万亿元，实体人民币贷款增加10.91万亿元。",
+    "前10个月人民币存款增加21.97万亿元，住户存款增加8.47万亿元，非金融企业存款增加1.91万亿元，非银金融机构存款增加5.99万亿元。",
+    "前10个月住户贷款减少1.46万亿元，企事业单位贷款增加12.39万亿元。"
+  ],
+  "indicators": [
+    {
+      "name": "M2余额",
+      "value": 359.06,
+      "unit": "万亿元",
+      "period": "2026-10月末",
+      "change": "同比 +7.1%",
+      "release_date": "2026-11-13",
+      "category": "货币存量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "广义货币存量，不代表当月新增资金流量。"
+    },
+    {
+      "name": "M1余额",
+      "value": 116.9,
+      "unit": "万亿元",
+      "period": "2026-10月末",
+      "change": "同比 +4.4%",
+      "release_date": "2026-11-13",
+      "category": "货币存量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "狭义货币；与M2的差额不能简单理解为闲置资金。"
+    },
+    {
+      "name": "M0余额",
+      "value": 15,
+      "unit": "万亿元",
+      "period": "2026-10月末",
+      "change": "同比 +10.7%",
+      "release_date": "2026-11-13",
+      "category": "货币存量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "流通中现金。"
+    },
+    {
+      "name": "社融存量",
+      "value": 469.16,
+      "unit": "万亿元",
+      "period": "2026-10月末",
+      "change": "同比 +7.2%",
+      "release_date": "2026-11-13",
+      "category": "融资存量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "社会融资规模存量，统计实体经济从金融体系获得的资金余额。"
+    },
+    {
+      "name": "前10个月社融增量",
+      "value": 28.61,
+      "unit": "万亿元",
+      "period": "2026-01至10月",
+      "change": "同比少增2.29万亿元",
+      "release_date": "2026-11-13",
+      "category": "融资流量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "累计流量，不是10月单月增量。"
+    },
+    {
+      "name": "人民币存款增加",
+      "value": 21.97,
+      "unit": "万亿元",
+      "period": "2026-01至10月",
+      "change": "累计新增",
+      "release_date": "2026-11-13",
+      "category": "存款流量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "部门分项仅列示主要类别，未列示项不能视为零。"
+    },
+    {
+      "name": "人民币贷款增加",
+      "value": 11.42,
+      "unit": "万亿元",
+      "period": "2026-01至10月",
+      "change": "累计新增",
+      "release_date": "2026-11-13",
+      "category": "贷款流量",
+      "source_name": "中国人民银行金融统计数据报告（转载全文）",
+      "source_url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html",
+      "note": "全金融机构人民币贷款口径；与社融中对实体经济人民币贷款口径不同。"
+    },
+    {
+      "name": "社会消费品零售总额",
+      "value": 416464,
+      "unit": "亿元",
+      "period": "2026-01至10月",
+      "change": "同比 +1.0%",
+      "release_date": "2026-11-16",
+      "category": "实体经济结果",
+      "source_name": "国家统计局",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965844.html",
+      "note": "名义零售额累计值。"
+    },
+    {
+      "name": "固定资产投资（不含农户）",
+      "value": 364824,
+      "unit": "亿元",
+      "period": "2026-01至10月",
+      "change": "同比 -8.1%",
+      "release_date": "2026-11-16",
+      "category": "实体经济结果",
+      "source_name": "国家统计局",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965844.html",
+      "note": "累计投资额；房地产开发投资同比下降21.6%。"
+    },
+    {
+      "name": "房地产开发投资",
+      "value": 57215,
+      "unit": "亿元",
+      "period": "2026-01至10月",
+      "change": "同比 -21.6%",
+      "release_date": "2026-11-16",
+      "category": "行业结果",
+      "source_name": "国家统计局",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965844.html",
+      "note": "房地产行业投资，不等同于房地产贷款余额。"
+    },
+    {
+      "name": "高技术产业投资",
+      "value": null,
+      "unit": "同比增速",
+      "period": "2026-01至10月",
+      "change": "同比 +4.0%",
+      "release_date": "2026-11-16",
+      "category": "行业结果",
+      "source_name": "国家统计局",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965844.html",
+      "note": "仅发布增速，未在本数据项填入绝对金额。"
+    }
+  ],
+  "flows": {
+    "social_financing": [
+      {
+        "name": "实体人民币贷款",
+        "value": 10.91,
+        "unit": "万亿元",
+        "type": "loan",
+        "note": "对实体经济发放的人民币贷款增加额"
+      },
+      {
+        "name": "政府债券净融资",
+        "value": 11.49,
+        "unit": "万亿元",
+        "type": "government_bond",
+        "note": "政府债券融资；财政资金拨付后的最终用途需结合财政支出数据判断"
+      },
+      {
+        "name": "企业债券净融资",
+        "value": 3.1,
+        "unit": "万亿元",
+        "type": "corporate_bond",
+        "note": "非金融企业债券净融资"
+      },
+      {
+        "name": "非金融企业境内股票融资",
+        "value": 0.5705,
+        "unit": "万亿元",
+        "type": "equity",
+        "note": "股权融资，不直接等同于银行存款创造"
+      }
+    ],
+    "deposits": [
+      {
+        "name": "住户存款",
+        "value": 8.47,
+        "unit": "万亿元",
+        "type": "household"
+      },
+      {
+        "name": "非金融企业存款",
+        "value": 1.91,
+        "unit": "万亿元",
+        "type": "corporate"
+      },
+      {
+        "name": "财政性存款",
+        "value": 3.03,
+        "unit": "万亿元",
+        "type": "fiscal"
+      },
+      {
+        "name": "非银行业金融机构存款",
+        "value": 5.99,
+        "unit": "万亿元",
+        "type": "nonbank"
+      },
+      {
+        "name": "其他及未列示部门",
+        "value": 2.57,
+        "unit": "万亿元",
+        "type": "other",
+        "note": "由总额减去上述已列分项计算得出，非官方单独公布项"
+      }
+    ],
+    "loans": [
+      {
+        "name": "住户贷款",
+        "value": -1.46,
+        "unit": "万亿元"
+      },
+      {
+        "name": "企事业单位贷款",
+        "value": 12.39,
+        "unit": "万亿元"
+      },
+      {
+        "name": "非银行业金融机构贷款",
+        "value": -0.2395,
+        "unit": "万亿元"
+      }
+    ],
+    "sectors": [
+      {
+        "name": "科技型中小企业贷款余额",
+        "value": 4.27,
+        "unit": "万亿元",
+        "change": "同比 +20.1%",
+        "period": "2026年三季度末",
+        "source_name": "中国人民银行三季度金融机构贷款投向统计报告（转载）",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuqvx5929572.shtml"
+      },
+      {
+        "name": "高新技术企业贷款余额",
+        "value": 22.09,
+        "unit": "万亿元",
+        "change": "同比 +17.2%",
+        "period": "2026年三季度末",
+        "source_name": "中国人民银行三季度金融机构贷款投向统计报告（转载）",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuqvx5929572.shtml"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "人民银行金融统计数据（转载全文，注明原始发布机构）",
+      "url": "https://www.nbd.com.cn/rss/msn_reader/articles/4647145.html"
+    },
+    {
+      "name": "国家统计局：10月份国民经济运行情况",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965844.html"
+    },
+    {
+      "name": "人民银行三季度金融机构贷款投向统计报告（转载）",
+      "url": "https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuqvx5929572.shtml"
+    },
+    {
+      "name": "人民银行三季度货币政策执行报告（上海市金融办转载PDF）",
+      "url": "https://jrj.sh.gov.cn/cmsres/36/363c21a847494552bc89c94d6139f61a/6f5f6281676a2dba5f9addf96a8249f4.pdf"
+    }
+  ],
+  "methodology": [
+    "M2是货币存量，不是逐笔资金流水；不能把M2按用途直接拆成消费、投资、还债和炒资产。",
+    "社融增量是实体经济从金融体系获得的融资流量；社融中的实体人民币贷款与金融统计中的人民币贷款不是完全相同口径。",
+    "存款分部门增量属于持有人结构变化，不等于这些部门的收入或财富增加；银行间转账只改变存款归属，不改变全体系存款总量。",
+    "政府债券净融资不等于资金已经形成当期基建投资或居民收入；需要继续追踪财政拨付和实际支出。",
+    "贷款投向统计是贷款余额/增速口径，不等于资金最终用途；不同报告统计期可能分别为10月末、前三季度或前10个月。",
+    "存款分项已公布住户、企业、财政、非银四类合计19.40万亿元；与人民币存款总增量21.97万亿元相差2.57万亿元，列为其他及未列示部门的差额，不擅自归类。",
+    "行业贷款余额是存量，不可与前10个月社融融资流量相加。",
+    "本期数据中，M2/M1、社融、存款及贷款来自人民银行报告转载全文；实体经济指标来自国家统计局官网。报告保留原始来源链接和发布日期。"
+  ],
+  "generated_at": "2026-11-16T10:49:56.770958+00:00"
+}
