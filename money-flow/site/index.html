@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中国货币与资金流向全景</title>
+<style>
+:root{color-scheme:dark;--line:#26364f;--muted:#9aabc2;--text:#edf3fb;--blue:#72a7ff;--teal:#55d6be;--amber:#f4c56a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#101c31,#0b1220 400px);color:var(--text);font:15px/1.65 system-ui,sans-serif}
+main{max-width:1160px;margin:auto;padding:34px 22px 70px}.top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.eyebrow{color:var(--teal);font-size:12px;letter-spacing:.16em;font-weight:700}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:12px 0}.sub,.muted{color:var(--muted)}.sub{max-width:760px}.muted{font-size:13px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--amber);font-size:12px;height:max-content}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}.panel{background:#121d30;border:1px solid var(--line);border-radius:16px;padding:20px}.metric{font-size:23px;font-weight:700;color:var(--blue);margin-top:8px}
+.section{margin-top:24px}h2{font-size:19px;margin:0 0 14px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{padding:16px 12px;background:#17253b;border:1px solid var(--line);border-radius:12px;min-height:112px}.step b{display:block;color:var(--teal);margin-bottom:6px}
+.notice{border-left:3px solid var(--amber);background:#2a2519;padding:14px 16px;border-radius:8px;color:#f7e7c3}
+a{color:#8db7ff;text-decoration:none}a:hover{text-decoration:underline}.sources{display:flex;gap:16px;flex-wrap:wrap}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500}
+footer{margin-top:38px;color:var(--muted);font-size:12px}@media(max-width:760px){.grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}}
+</style></head><body><main>
+<div class="top"><div><div class="eyebrow">MACRO MONEY FLOW MONITOR</div><h1>中国货币与资金流向<br>全景监测</h1><p class="sub">不只看 M2 增长多少，更追踪货币来源、持有部门、融资行业、实际用途，以及最终经济效果。</p></div><div class="pill" id="status">正在读取数据…</div></div>
+<div class="grid"><section class="panel"><div class="muted">最新统计期</div><div class="metric" id="period">待接入</div><div class="muted">以官方发布日期为准</div></section><section class="panel"><div class="muted">已核验指标</div><div class="metric" id="count">0</div><div class="muted">每项附来源与统计口径</div></section><section class="panel"><div class="muted">报告生成时间</div><div class="metric" id="generated" style="font-size:16px">—</div><div class="muted">GitHub Actions 自动构建</div></section></div>
+<section class="panel section"><h2>资金流向分析链条</h2><div class="flow"><div class="step"><b>01 · 货币来源</b>贷款、政府债券、财政支出、外部资金</div><div class="step"><b>02 · 持有部门</b>居民、非金融企业、政府、非银机构</div><div class="step"><b>03 · 行业融资</b>制造业、房地产、基建、科技、服务业</div><div class="step"><b>04 · 实际用途</b>消费、设备投资、工资、还债、资产配置</div><div class="step"><b>05 · 经济效果</b>产出、利润、就业、收入、债务风险</div></div></section>
+<section class="section panel"><h2>最新官方数据</h2><div id="data"><p class="muted">数据载入中…</p></div></section><section class="section panel"><h2>数据来源</h2><div class="sources" id="sources"></div></section>
+<section class="section panel"><h2>口径与分析边界</h2><ul id="method"><li>M2 是货币存量，不是逐笔资金流水。</li><li>贷款投向不等于资金最终用途。</li><li>存款增加不等于收入、利润或净财富增加。</li></ul></section>
+<footer>本项目用于宏观经济研究，不构成投资建议。缺失数据不作虚构；指标应标注统计期、单位、发布日期和来源。</footer></main>
+<script>
+fetch('./data/latest.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
+document.getElementById('status').textContent=d.status==='awaiting_official_data'?'等待官方数据接入':'数据状态：'+d.status;
+document.getElementById('period').textContent=d.period||'待接入';document.getElementById('count').textContent=(d.indicators||[]).length;
+document.getElementById('generated').textContent=d.generated_at?new Date(d.generated_at).toLocaleString('zh-CN'):'尚未生成';
+const box=document.getElementById('data');
+if(!d.indicators||!d.indicators.length){box.innerHTML='<div class="notice"><b>当前尚无已核验的月度观测值。</b><br>看板已搭建，官方数据采集与交叉核验模块尚未接通。这里不会用示例数字冒充真实数据。</div>'}
+else{const t=document.createElement('table');t.innerHTML='<thead><tr><th>指标</th><th>数值</th><th>统计期</th><th>发布日期</th><th>来源</th></tr></thead>';const b=document.createElement('tbody');d.indicators.forEach(x=>{const tr=document.createElement('tr');[x.name,String(x.value)+' '+x.unit,x.period,x.release_date].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td)});const td=document.createElement('td'),a=document.createElement('a');a.href=x.source_url;a.textContent='官方来源';a.target='_blank';a.rel='noopener';td.appendChild(a);tr.appendChild(td);b.appendChild(tr)});t.appendChild(b);box.replaceChildren(t)}
+const s=document.getElementById('sources');(d.sources||[]).forEach(x=>{const a=document.createElement('a');a.href=x.url;a.textContent=x.name;a.target='_blank';a.rel='noopener';s.appendChild(a)});
+const m=document.getElementById('method');if(d.methodology&&d.methodology.length)m.replaceChildren(...d.methodology.map(v=>{const li=document.createElement('li');li.textContent=v;return li}))
+}).catch(e=>{document.getElementById('status').textContent='数据读取失败';document.getElementById('data').textContent='无法读取数据文件：'+e.message});
+</script></body></html>
